@@ -2,6 +2,9 @@
 
 ## Shopping Cart Project README FILE 
 
+## Project Description
+https://github.com/prof-rossetti/intro-to-python/blob/main/projects/shopping-cart/README.md
+
 ## Setting Up Your Environment
 conda create -n shopping-env python=3.8 
 conda activate shopping-env
