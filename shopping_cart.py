@@ -1,5 +1,26 @@
 
 
+#information capture / input
+selected_id = input("Please input a product identifier: ")
+
+print(selected_id)
+
+print(type(selected_id))
+
+#code from Professor Rosetti 
+
+
+
+
+
+#information display / output
+
+
+
+
+
+
+
 
 print(" ")
 print(" ")
@@ -8,17 +29,17 @@ print(" ")
 print("----------------------------------")
 print("         Grocery Store")
 print(" ")
-print("1877 75th St. New York NY 10004")
+print(" 1877 75th St. New York NY 10004")
 print("----------------------------------")
 print(" ")
 print("     www.mygrocerystore.com")
+print("     Phone: (212) 444-4444")
+print("  Checkout Time 03:41pm 10/12/21")
 print(" ")
 print(" ")
-print(" ")
-print("")
 
 
-
+             
 
 
 
@@ -43,7 +64,9 @@ products = [
     {"id":18, "name": "Pizza for One Suprema Frozen Pizza", "department": "frozen", "aisle": "frozen pizza", "price": 12.50},
     {"id":19, "name": "Gluten Free Quinoa Three Cheese & Mushroom Blend", "department": "dry goods pasta", "aisle": "grains rice dried goods", "price": 3.99},
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
-] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
+] 
+
+# based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 
 #def to_usd(my_price):
