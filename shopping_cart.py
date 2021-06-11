@@ -64,7 +64,6 @@ while True: #information capture / input
         print("--------------------------------------------------")
         print("--------------------------------------------------")
         print(" ")
-        print(" ")
         break
     else:                  
         print(" ")
@@ -80,12 +79,14 @@ while True: #information capture / input
 
 #This above code is from Professor Rosetti in "Shopping Cart" Project Walkthrough 
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
-
+print("SELECTED PRODUCTS: ")
+print(" ")
+print(" ")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
+    print(matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
@@ -99,12 +100,12 @@ print("--------------------------------------------------")
 print(" ")
 #import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
 myFloat=total_price
-print("               Subtotal: $", + round(total_price, 2))
+print("            Subtotal: $", + round(total_price, 2))
 print(" ")
-print("              Sales Tax: $", + round(total_price*.0875, 2))
+print("           Sales Tax: $", + round(total_price*.0875, 2))
 print(" ")
 myFloat=total_price
-print("                  Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
+print("               Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
 print(" ")
 print("--------------------------------------------------")
 
@@ -119,6 +120,7 @@ print("--------------------------------------------------")
 #information display / output
 
 print("--------------------------------------------------")
+print(" ")
 print("         Thank You For Shopping With Dan")
 print("              Please Come Again!!")
 print(" ")
@@ -137,6 +139,7 @@ now = datetime.datetime.now()
 print("      CHECKOUT: ", e.strftime("%a, %b %d, %Y, %I:%M %p"))
 print(" Checkout Long Time:  ", (str(now))) #this code was from a googled website
 #https://www.tutorialspoint.com/How-to-print-current-date-and-time-using-Python
+print(" ")
 print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
