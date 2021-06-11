@@ -2,7 +2,7 @@ print(" ")
 print(" ")
 print(" ")
 print("---------------------------------------")
-print("       Welcome to Shopping Cart ")
+print("     Welcome to the Shopping Cart ")
 print("---------------------------------------")
 print(" ")
 print(" ")
@@ -34,19 +34,36 @@ products = [
 # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 total_price = 0
+selected_ids = []
+
 
 while True: #information capture / input
     selected_id = input("Please input a product identifier: ") #This code prompts the user for a selected identifier, and then we used that selected identifier to look up all of the products matching that identifier 
     if selected_id == "DONE":
         break
     else:                  
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
-        matching_product = matching_products[0] 
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
+        #matching_product = matching_products[0] 
+        #total_price = total_price + matching_product["price"]
+        #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        selected_ids.append(selected_id)
+    
+    #else if selected_id <> "DONE" or matching_product:
+        #selected_id = input("Please input a product identifier: ")
 
 #This above code is from Professor Rosetti in "Shopping Cart" Project Walkthrough 
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
+
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
+    matching_product = matching_products[0] 
+    total_price = total_price + matching_product["price"]
+    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        #selected_ids.append(selected_id)
+#print(selected_ids) 
+
+#for selected_id in expressionline
+
 
 print(" ")
 print(" ")
@@ -58,11 +75,11 @@ print(" ")
 
 print("---------------------------------------")
 print(" ")
-print("          Subtotal: ", + (total_price))
+print("          Subtotal: $", + (total_price))
 print(" ")
-print("         Sales Tax: ", + (total_price)*.08)
+print("         Sales Tax: $", + (total_price)*.08)
 print(" ")
-print("             Total: ", + (total_price)*.08 + (total_price))
+print("             Total: $", + (total_price)*.08 + (total_price))
 print(" ")
 print("---------------------------------------")
 
@@ -96,16 +113,16 @@ print(" ")
 print(" ")
 print(" ")
 print("---------------------------------------")
-print("     Thank You For Shopping With")
+print("    Thank You For Shopping With Dan")
 print(" ")
-print("    East Fulton St. Grocery Store")
+print("   Dan's East Fulton St. Grocery Store")
 print(" ")
-print("   1877 75th St. New York NY 10004")
+print("    42 Fulton St. New York NY 10004")
 print("---------------------------------------")
 print(" ")
-print("     www.mygrocerystore.com")
-print("     Phone: (212) 444-4444")
-print("  Checkout Time 03:41pm 10/12/21")
+print("      www.dansgrocerystore.com")
+print("      Phone: (212) 444-4444")
+print("   Checkout Time 03:41pm 10/12/21")
 print(" ")
 print(" ")
 print(" ")
