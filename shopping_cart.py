@@ -17,8 +17,8 @@ print(" ")
 print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
-print("    Please Input Product ID #1 - #20 + ENTER")
-print("    DONE + ENTER when Product Input Complete")
+print("STEP 1: Input Product ID #1 - #20 + ENTER")
+print("STEP 2: Type 'DONE' + ENTER when Product Input is Complete")
 print(" ")
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -94,7 +94,7 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
     total_price = total_price + matching_product["price"]
-    print("    "+ matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
+    print("    " + "($" + str(matching_product["price"]) + ") " + matching_product["name"])
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
