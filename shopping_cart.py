@@ -1,15 +1,31 @@
 import math 
+import time
+from datetime import date
+import datetime
+e = datetime.datetime.now()
+
 print(" ")
 print(" ")
 print(" ")
+
 print("--------------------------------------------------")
+print(" ")
 print("       Dan's East Fulton St. Grocery Store")
+print("            www.dansgrocerystore.com")
 print(" ")
-print("      Welcome to your Digital Shopping Cart ")
+print("     Welcome to your Digital Shopping Cart!! ")
+print(" ")
+print("--------------------------------------------------")
+print(" ")
+print("  CHECKOUT TIME: ", e.strftime("%a, %b %d, %Y, %I:%M %p"))
+print(" ")
+print("--------------------------------------------------")
+print(" ")
 print("--------------------------------------------------")
 print(" ")
 print(" ")
-print(" ")
+#I got this time code from https://phoenixnap.com/kb/get-current-date-time-python
+
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -45,6 +61,10 @@ while True: #information capture / input
     if selected_id == "DONE":
         print(" ")
         print(" ")
+        print("--------------------------------------------------")
+        print("--------------------------------------------------")
+        print(" ")
+        print(" ")
         break
     else:                  
         print(" ")
@@ -74,31 +94,22 @@ for selected_id in selected_ids:
 
 print(" ")
 print(" ")
-print(" ")
-print(" ")
-print(" ")
-print(" ")
-
-
+print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
 #import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
 myFloat=total_price
-print("               Subtotal: $", + round(myFloat, 2))
+print("               Subtotal: $", + round(total_price, 2))
 print(" ")
 print("              Sales Tax: $", + round(total_price*.0875, 2))
 print(" ")
 myFloat=total_price
-print("                  Total: $", + (round(myFloat*.0875, 2) + (round(myFloat, 2))))
+print("                  Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
 print(" ")
 print("--------------------------------------------------")
 
 #This above code is from Professor Rosetti @ 40:38/51:11
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
-
-print(" ")
-print(" ")
-
 
 
 #This above code is from Professor Rosetti @ 40:38/51:11
@@ -107,15 +118,14 @@ print(" ")
 
 #information display / output
 
-
-print(" ")
-print(" ")
 print("--------------------------------------------------")
-print("        Thank You For Shopping With Dan")
+print("         Thank You For Shopping With Dan")
+print("              Please Come Again!!")
 print(" ")
 print("      Dan's East Fulton St. Grocery Store")
 print(" ")
 print("         42 Fulton St. New York NY 10004")
+print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
 print("            www.dansgrocerystore.com")
@@ -124,9 +134,11 @@ print("   ")
 
 import datetime
 now = datetime.datetime.now()
-print("    Checkout Time:  ", (str(now))) #this code was from a googled website
+print("      CHECKOUT: ", e.strftime("%a, %b %d, %Y, %I:%M %p"))
+print(" Checkout Long Time:  ", (str(now))) #this code was from a googled website
 #https://www.tutorialspoint.com/How-to-print-current-date-and-time-using-Python
-
+print("--------------------------------------------------")
+print("--------------------------------------------------")
 print(" ")
 print(" ")
 print(" ")
