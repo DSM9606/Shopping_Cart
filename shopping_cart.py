@@ -3,30 +3,19 @@ import time
 from datetime import date
 import datetime
 e = datetime.datetime.now()
-
 print(" ")
 print(" ")
-print(" ")
-
 print("--------------------------------------------------")
 print(" ")
 print("       Dan's East Fulton St. Grocery Store")
 print("            www.dansgrocerystore.com")
 print(" ")
-print("     Welcome to your Digital Shopping Cart!! ")
-print(" ")
-print("--------------------------------------------------")
-print(" ")
-print("  CHECKOUT TIME: ", e.strftime("%a, %b %d, %Y, %I:%M %p"))
-print(" ")
-print("--------------------------------------------------")
-print(" ")
-print("--------------------------------------------------")
-print(" ")
-print(" ")
-#I got this time code from https://phoenixnap.com/kb/get-current-date-time-python
+print("         Digital Shopping Cart Receipt ")
 
-
+print(" ")
+print("--------------------------------------------------")
+print("--------------------------------------------------")
+print(" ")
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -57,9 +46,8 @@ selected_ids = []
 
 
 while True: #information capture / input
-    selected_id = input("Please input a product identifier: ") #This code prompts the user for a selected identifier, and then we used that selected identifier to look up all of the products matching that identifier 
+    selected_id = input("     Please input a product identifier: ") #This code prompts the user for a selected identifier, and then we used that selected identifier to look up all of the products matching that identifier 
     if selected_id == "DONE":
-        print(" ")
         print(" ")
         print("--------------------------------------------------")
         print("--------------------------------------------------")
@@ -79,33 +67,47 @@ while True: #information capture / input
 
 #This above code is from Professor Rosetti in "Shopping Cart" Project Walkthrough 
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
-print("SELECTED PRODUCTS: ")
+
+
+print("       Dan's East Fulton St. Grocery Store")
+print("            www.dansgrocerystore.com")
 print(" ")
+print("       PLEASE REVIEW YOUR DIGITAL RECEIPT ")
 print(" ")
+print("--------------------------------------------------")
+print(" ")
+print("  CHECKOUT TIME: ", e.strftime("%a, %b %d, %Y, %I:%M %p"))
+print(" ")
+print("--------------------------------------------------")
+print("--------------------------------------------------")
+print(" ")
+
+print("               SELECTED PRODUCTS: ")
+print(" ")
+
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
     total_price = total_price + matching_product["price"]
-    print(matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
+    print("    "+ matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
 #for selected_id in expressionline
-   
+#I got this time code from https://phoenixnap.com/kb/get-current-date-time-python
 
-print(" ")
 print(" ")
 print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
 #import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
 myFloat=total_price
-print("            Subtotal: $", + round(total_price, 2))
+print("              Subtotal: $", + round(total_price, 2))
 print(" ")
-print("           Sales Tax: $", + round(total_price*.0875, 2))
+print("             Sales Tax: $", + round(total_price*.0875, 2))
 print(" ")
 myFloat=total_price
-print("               Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
+print("                 Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
 print(" ")
 print("--------------------------------------------------")
 
@@ -127,6 +129,7 @@ print(" ")
 print("      Dan's East Fulton St. Grocery Store")
 print(" ")
 print("         42 Fulton St. New York NY 10004")
+print(" ")
 print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
