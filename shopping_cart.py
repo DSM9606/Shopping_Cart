@@ -1,4 +1,12 @@
-
+print(" ")
+print(" ")
+print(" ")
+print("----------------------------------")
+print("    Welcome to Shopping Cart ")
+print("----------------------------------")
+print(" ")
+print(" ")
+print(" ")
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -26,11 +34,16 @@ products = [
 # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 
-#information capture / input
-selected_id = input("Please input a product identifier: ") # this outputs srt as the data type
-matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-matching_product = matching_products[0]
-print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+
+while True: #information capture / input
+    selected_id = input("Please input a product identifier: ") # this outputs srt as the data type
+    
+    if selected_id == "DONE":
+        break
+    else:                  
+        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        matching_product = matching_products[0]
+        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 
 
@@ -54,7 +67,7 @@ print(" ")
 print(" ")
 print(" ")
 print("----------------------------------")
-print("         Grocery Store")
+print("     Fulton St. Grocery Store")
 print(" ")
 print(" 1877 75th St. New York NY 10004")
 print("----------------------------------")
@@ -87,7 +100,7 @@ print(" ")
 
 # TODO: write some Python code here to produce the desired output
 
-print(products)
+#print(products) #This code prints all the products (We used this at the beginning of the tutorial)
 
 
 #A grocery store name of your choice
