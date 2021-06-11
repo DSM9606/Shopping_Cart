@@ -74,7 +74,7 @@ while True: #information capture / input
         #total_price = total_price + matching_product["price"]
         #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
         selected_ids.append(selected_id)
-    
+
     #else if selected_id <> "DONE" or matching_product:
         #selected_id = input("Please input a product identifier: ")
 
@@ -85,12 +85,12 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+    print("SELECTED PRODUCT: " + matching_product["name"] + " ($" + str(matching_product["price"]) + ")")
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
 #for selected_id in expressionline
-
+   
 
 print(" ")
 print(" ")
