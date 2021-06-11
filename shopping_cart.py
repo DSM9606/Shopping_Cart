@@ -1,3 +1,4 @@
+import math 
 print(" ")
 print(" ")
 print(" ")
@@ -81,13 +82,14 @@ print(" ")
 
 print("--------------------------------------------------")
 print(" ")
-import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
+#import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
 myFloat=total_price
 print("               Subtotal: $", + round(myFloat, 2))
 print(" ")
-print("              Sales Tax: $", + round(total_price*.08, 2))
+print("              Sales Tax: $", + round(total_price*.0875, 2))
 print(" ")
-print("                  Total: $", + (round(total_price*.08, 2) + (total_price)))
+myFloat=total_price
+print("                  Total: $", + (round(myFloat*.0875, 2) + (round(myFloat, 2))))
 print(" ")
 print("--------------------------------------------------")
 
