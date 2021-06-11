@@ -2,9 +2,8 @@ print(" ")
 print(" ")
 print(" ")
 print("--------------------------------------------------")
-print("       Dan's East Fulton St. Grocery Store")
-print(" ")
-print("      Welcome to your Digital Shopping Cart ")
+print("    Dan's East Fulton St. Grocery Store")
+print("   Welcome to your Digital Shopping Cart ")
 print("--------------------------------------------------")
 print(" ")
 print(" ")
@@ -42,12 +41,8 @@ selected_ids = []
 while True: #information capture / input
     selected_id = input("Please input a product identifier: ") #This code prompts the user for a selected identifier, and then we used that selected identifier to look up all of the products matching that identifier 
     if selected_id == "DONE":
-        print(" ")
-        print(" ")
         break
     else:                  
-        print(" ")
-        print(" ")
         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
         #matching_product = matching_products[0] 
         #total_price = total_price + matching_product["price"]
@@ -79,21 +74,23 @@ print(" ")
 print(" ")
 
 
-print("--------------------------------------------------")
+print("---------------------------------------")
 print(" ")
-import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
-myFloat=total_price
-print("               Subtotal: $", + round(myFloat, 2))
+print("          Subtotal: $", + ((total_price)))
 print(" ")
-print("              Sales Tax: $", + round(total_price*.08, 2))
+print("         Sales Tax: $", + round((total_price)*.08))
 print(" ")
-print("                  Total: $", + (round(total_price*.08, 2) + (total_price)))
+print("             Total: $", + ((total_price)*.08 + (total_price)))
 print(" ")
-print("--------------------------------------------------")
+print("---------------------------------------")
 
 #This above code is from Professor Rosetti @ 40:38/51:11
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
 
+print(" ")
+print(" ")
+print(" ")
+print(" ")
 print(" ")
 print(" ")
 
@@ -106,23 +103,31 @@ print(" ")
 #information display / output
 
 
+
+
+
+
+
+
 print(" ")
 print(" ")
-print("--------------------------------------------------")
-print("        Thank You For Shopping With Dan")
 print(" ")
-print("      Dan's East Fulton St. Grocery Store")
 print(" ")
-print("         42 Fulton St. New York NY 10004")
-print("--------------------------------------------------")
+print("---------------------------------------")
+print("    Thank You For Shopping With Dan")
 print(" ")
-print("            www.dansgrocerystore.com")
-print("              Phone: (212) 444-4444")
+print("   Dan's East Fulton St. Grocery Store")
+print(" ")
+print("    42 Fulton St. New York NY 10004")
+print("---------------------------------------")
+print(" ")
+print("      www.dansgrocerystore.com")
+print("      Phone: (212) 444-4444")
 print("   ")
 
 import datetime
 now = datetime.datetime.now()
-print("    Checkout Time:  ", (str(now))) #this code was from a googled website
+print("Checkout Time:  ", (str(now))) #this code was from a googled website
 #https://www.tutorialspoint.com/How-to-print-current-date-and-time-using-Python
 
 print(" ")
