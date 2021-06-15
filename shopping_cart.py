@@ -83,7 +83,6 @@ while True: #information capture / input
         print(" ")
         selected_ids.append(selected_id)
    
-
     #else: selected_id =
         #print("d")
         
@@ -101,6 +100,7 @@ while True: #information capture / input
 #print(selected_id!="1" or "2" or "3")
     
     #print("invalid choice")
+
 
 
 
