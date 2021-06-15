@@ -13,12 +13,12 @@ print("            www.dansgrocerystore.com")
 print(" ")
 print("         Digital Shopping Cart Receipt ")
 
-print(" ")
+
 print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
 print("STEP 1: Input Product ID #1 - #20 + ENTER")
-print("STEP 2: Type 'DONE' + ENTER when Product Input is Complete")
+print("STEP 2: Type 'DONE' + ENTER when Product Input Complete")
 print(" ")
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -45,8 +45,24 @@ products = [
 
 # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+
+def to_usd(my_price):
+    """
+    Converts a numeric value to usd-formatted string, for printing and display purposes.
+
+    Param: my_price (int or float) like 4000.444444
+
+    Example: to_usd(4000.444444)
+
+    Returns: $4,000.44
+    """
+    return f"${my_price:,.2f}" #> $12,000.71
+
+
+
 total_price = 0
 selected_ids = []
+
 
 
 while True: #information capture / input
@@ -60,11 +76,19 @@ while True: #information capture / input
     else:                  
         print(" ")
         print(" ")
-        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
+        selected_ids.append(selected_id)
+   
+
+
+
+        
+    #else: selected_id =
+        #print("d")
+        
+         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
         #matching_product = matching_products[0] 
         #total_price = total_price + matching_product["price"]
         #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-        selected_ids.append(selected_id)
 
     #else if selected_id <> "DONE" or matching_product:
         #selected_id = input("Please input a product identifier: ")
@@ -94,7 +118,7 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
     total_price = total_price + matching_product["price"]
-    print("    " + "($" + str(matching_product["price"]) + ") " + matching_product["name"])
+    print ("    " + "($" + str(matching_product["price"]) + ") " + matching_product["name"])
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
@@ -106,13 +130,11 @@ print("--------------------------------------------------")
 print("--------------------------------------------------")
 print(" ")
 #import math # i learned how to do two decimal places with this code https://java2blog.com/format-a-float-to-two-decimal-places/
-Float=total_price
-print("              Subtotal: $", + round(total_price, 2))
+print("              Subtotal: " + to_usd(total_price) )
 print(" ")
-print("             Sales Tax: $", + round(total_price*.0875, 2))
+print("             Sales Tax: " + to_usd((total_price*.0875)))
 print(" ")
-Float=total_price
-print("                 Total: $", + (round(total_price*.0875, 2) + (round(total_price, 2))))
+print("                 Total: " + to_usd(total_price*.0875+total_price))
 print(" ")
 print("--------------------------------------------------")
 
