@@ -1,8 +1,12 @@
+
+
 import math 
 import time
 from datetime import date
 import datetime
 e = datetime.datetime.now()
+
+
 print(" ")
 print(" ")
 print("--------------------------------------------------")
@@ -66,6 +70,7 @@ selected_ids = []
 
 
 while True: #information capture / input
+  
     selected_id = input("     Please input a product identifier: ") #This code prompts the user for a selected identifier, and then we used that selected identifier to look up all of the products matching that identifier 
     if selected_id == "DONE":
         print(" ")
@@ -79,9 +84,6 @@ while True: #information capture / input
         selected_ids.append(selected_id)
    
 
-
-
-        
     #else: selected_id =
         #print("d")
         
@@ -96,7 +98,15 @@ while True: #information capture / input
 #This above code is from Professor Rosetti in "Shopping Cart" Project Walkthrough 
 #https://www.youtube.com/watch?v=3BaGb-1cIr0
 
+#print(selected_id!="1" or "2" or "3")
+    
+    #print("invalid choice")
 
+
+
+print(" ")
+print(" ")
+print(" ")
 print("       Dan's East Fulton St. Grocery Store")
 print("            www.dansgrocerystore.com")
 print(" ")
@@ -117,8 +127,8 @@ print(" ")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #This allows you to look up products matching an identifier
     matching_product = matching_products[0] 
-    total_price = total_price + matching_product["price"]
-    print ("    " + "($" + str(matching_product["price"]) + ") " + matching_product["name"])
+    total_price = (total_price + matching_product["price"])
+    print ("    " + "(" + str(to_usd(matching_product["price"])) + ") " + matching_product["name"])
         #selected_ids.append(selected_id)
 #print(selected_ids) 
 
